@@ -16,16 +16,19 @@ public class JumpMain {
 	private static String pcPath2 = "screenshot/jump_2.png";
 	private static boolean isThreadRunning = true;
 
+	private static double rate = 1.38;
+	private static double scale = 0.55;
+
 	public static void main(String[] args) {
 
 		// adbScreenShot();
 		// long mills = 50;
 		// swipe(50, 250, 250, 250, mills);
-		// log("ÕÍ≥…");
+		// log("ÂÆåÊàê");
 
 		JumpUi jumpUi = new JumpUi();
 		jumpUi.setListener(createListener());
-		jumpUi.setScale(0.3);
+		jumpUi.setScale(scale);
 		jumpUi.setImage(pcPath2);
 		jumpUi.show();
 
@@ -62,7 +65,6 @@ public class JumpMain {
 		int dx = x2 - x1;
 		int dy = y2 - y1;
 		double range = Math.sqrt(dx * dx + dy * dy);
-		double rate = 1.41;
 		long mills = (long) (range * rate);
 		log("[swipe] " + mills + "ms");
 		String swipeCmd = String.format("shell input swipe %s %s %s %s %s", x1, y1, x2, y2, mills);

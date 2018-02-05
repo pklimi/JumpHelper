@@ -43,7 +43,7 @@ public class JumpUi {
 
 	public void show() {
 
-		// 显示应用 GUI
+		// 鏄剧ず搴旂敤 GUI
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				createAndShowGUI();
@@ -53,11 +53,11 @@ public class JumpUi {
 
 	private void createAndShowGUI() {
 
-		// 确保一个漂亮的外观风格
+		// 纭繚涓�涓紓浜殑澶栬椋庢牸
 		JFrame.setDefaultLookAndFeelDecorated(true);
 
-		// 创建 JFrame 实例
-		final JFrame frame = new JFrame("Login Example");
+		// 鍒涘缓 JFrame 瀹炰緥
+		final JFrame frame = new JFrame("Jump Helper");
 		// Setting the width and height of frame
 		// frame.setSize(350, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,7 +134,7 @@ public class JumpUi {
 		frame.getContentPane().add(imagePanel);
 
 		frame.pack();
-		// 设置界面可见
+		// 璁剧疆鐣岄潰鍙
 		frame.setVisible(true);
 	}
 
